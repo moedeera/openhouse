@@ -1,0 +1,24 @@
+{
+  "name": "oph",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev":"nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moedeera/openhouse.git"
+  },
+  "author": "Moe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/moedeera/openhouse/issues"
+  },
+  "homepage": "https://github.com/moedeera/openhouse#readme",
+  "dependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
