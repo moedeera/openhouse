@@ -12,9 +12,16 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Main />} />
-          <UserContext.Provider value={"hello"}>
-            <Route path="/UserContext" element={<ProjectOne />} />
-          </UserContext.Provider>
+
+          <Route
+            path="/UserContext"
+            element={
+              <UserContext.Provider value={"hello"}>
+                <ProjectOne />
+              </UserContext.Provider>
+            }
+          />
+
           <Route path="/Reducers" element={<ProjectTwo />} />
         </Routes>
       </div>
