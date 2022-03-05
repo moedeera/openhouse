@@ -8,29 +8,7 @@ import { UserContext } from "./Context/UserContext";
 import { CustomHooks } from "./Context/CustomHooks";
 
 function App() {
-  const { league, teams } = CustomHooks();
-  return (
-    <div className="App">
-      <Router>
-        <div className="App">
-          <Routes>
-            <Route path="/" element={<Main />} />
-
-            <Route
-              path="/UserContext"
-              element={
-                <UserContext.Provider value={{ league, teams }}>
-                  <ProjectOne />
-                </UserContext.Provider>
-              }
-            />
-
-            <Route path="/Reducers" element={<ProjectTwo />} />
-          </Routes>
-        </div>
-      </Router>
-    </div>
-  );
+  return <div className="App">hello</div>;
 }
 
 export default App;
