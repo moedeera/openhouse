@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect, useContext } from "react";
+import axios from "axios";
 
 export const CustomHooks = () => {
   const [league, setLeague] = useState({
@@ -11,6 +12,19 @@ export const CustomHooks = () => {
     ],
     standings: [1, 2, 3, 4],
   });
+
+  const getLeagueData = async () => {
+    try {
+      const res = await axios.get("/api/league");
+      console.log(res.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getLeagueData();
+  }, []);
 
   return {
     league,
