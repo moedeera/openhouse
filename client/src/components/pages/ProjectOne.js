@@ -2,8 +2,9 @@ import React, { useContext } from "react";
 import { UserContext } from "../../Context/UserContext";
 
 export const ProjectOne = () => {
-  const msg = UserContext;
-  console.log(msg);
+  const { teams, league } = useContext(UserContext);
+  console.log(teams, league);
+
   return <div>ProjectOne</div>;
 };
 

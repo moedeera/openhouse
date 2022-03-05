@@ -3,20 +3,15 @@ import { useState, useEffect, useContext } from "react";
 import axios from "axios";
 
 export const CustomHooks = () => {
-  const [league, setLeague] = useState({
-    teams: [
-      { id: 1, name: "North" },
-      { id: 2, name: "West" },
-      { id: 3, name: "South" },
-      { id: 4, name: "East" },
-    ],
-    standings: [1, 2, 3, 4],
-  });
+  const [league, setLeague] = useState([]);
+  const [teams, setTeams] = useState([]);
 
   const getLeagueData = async () => {
     try {
       const res = await axios.get("/api/league");
       console.log(res.data);
+      setLeague(res.data.standings);
+      setTeams(res.data.teams);
     } catch (error) {
       console.log(error);
     }
@@ -29,5 +24,6 @@ export const CustomHooks = () => {
   return {
     league,
     setLeague,
+    teams,
   };
 };

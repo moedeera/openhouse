@@ -5,8 +5,10 @@ import ProjectOne from "./components/pages/ProjectOne";
 import { ProjectTwo } from "./components/pages/ProjectTwo";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { UserContext } from "./Context/UserContext";
+import { CustomHooks } from "./Context/CustomHooks";
 
 function App() {
+  const { league, teams } = CustomHooks();
   return (
     <Router>
       <div className="App">
@@ -16,7 +18,7 @@ function App() {
           <Route
             path="/UserContext"
             element={
-              <UserContext.Provider value={"hello"}>
+              <UserContext.Provider value={{ league, teams }}>
                 <ProjectOne />
               </UserContext.Provider>
             }
