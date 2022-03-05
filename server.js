@@ -16,7 +16,9 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.use("/api/league", require("./routes/api/league"));
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
