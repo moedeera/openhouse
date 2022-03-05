@@ -8,7 +8,12 @@ export const CustomHooks = () => {
 
   const getLeagueData = async () => {
     try {
-      const res = await axios.get("/api/league");
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+      const res = await axios.get("/api/league", config);
       console.log(res.data);
       setLeague(res.data.standings);
       setTeams(res.data.teams);
