@@ -4,11 +4,9 @@ import Main from "./components/pages/Main";
 import ProjectOne from "./components/pages/ProjectOne";
 import { ProjectTwo } from "./components/pages/ProjectTwo";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { UserContext } from "./Context/UserContext";
-import { CustomHooks } from "./Context/CustomHooks";
+import { UserContextProvider } from "./Context/UserContext";
 
 function App() {
-  const { league, teams } = CustomHooks();
   return (
     <div className="App">
       <Router>
@@ -19,9 +17,9 @@ function App() {
             <Route
               path="/UserContext"
               element={
-                <UserContext.Provider value={{ league, teams }}>
+                <UserContextProvider>
                   <ProjectOne />
-                </UserContext.Provider>
+                </UserContextProvider>
               }
             />
 
