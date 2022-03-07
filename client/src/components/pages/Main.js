@@ -4,7 +4,7 @@ export const Main = () => {
   return (
     <div>
       Main
-      <div>
+      <div className="Projects">
         <Link to="/UserContext">Project 1</Link>
       </div>
       <div>
