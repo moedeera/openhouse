@@ -10,6 +10,9 @@ export const Main = () => {
       <div>
         <Link to="/Reducers">Project 2</Link>
       </div>
+      <div>
+        <Link to="/MaterialUI">Project 3</Link>
+      </div>
       <div></div>
     </div>
   );

@@ -6,50 +6,44 @@
   height: 40vmin;
   pointer-events: none;
 }
-*{
-  box-sizing: border-box
+* {
+  box-sizing: border-box;
 }
-body{
-  background-color: #282c34;
+body {
+  background-color: grey;
 }
-.main{
-color:white;
-margin: 30px auto;
+.main {
+  color: white;
+  margin: 30px auto;
 
-padding: 0px 5px;
-
+  padding: 0px 5px;
 }
-.table{
-
+.table {
   border: 1px solid grey;
   width: 90%;
   margin: 0 auto;
   border-radius: 10px;
-  padding:0 5px ;
+  padding: 0 5px;
 }
-.team{
+.team {
   margin: 10px auto;
-display: grid;
-grid-template-columns: 1fr 4fr repeat(5,1fr);
-justify-content: center;
-
+  display: grid;
+  grid-template-columns: 1fr 4fr repeat(5, 1fr);
+  justify-content: center;
 }
 
-.team-row{
-
+.team-row {
   display: flex;
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid grey;
 }
-.color{
-
+.color {
   height: 1rem;
   width: 2rem;
   background-color: red;
   border-radius: 1px solid white;
 }
-
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

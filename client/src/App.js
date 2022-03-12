@@ -3,6 +3,7 @@ import "./App.css";
 import Main from "./components/pages/Main";
 import ProjectOne from "./components/pages/ProjectOne";
 import { ProjectTwo } from "./components/pages/ProjectTwo";
+import { ProjectThree } from "./components/pages/ProjectThree";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { UserContextProvider } from "./Context/UserContext";
 
@@ -24,6 +25,8 @@ function App() {
             />
 
             <Route path="/Reducers" element={<ProjectTwo />} />
+
+            <Route path="/MaterialUI" element={<ProjectThree />} />
           </Routes>
         </div>
       </Router>
